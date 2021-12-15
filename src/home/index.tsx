@@ -5,18 +5,18 @@ import styles from './Home.module.scss';
 import WethIcon from '../assets/images/supported-markets/weth__icon.png';
 import WnearIcon from '../assets/images/supported-markets/wnear__icon.png';
 
-interface SupportedMarketsTypes {
-	id: number;
-	AssetIcon: string,
-	Asset: string,
-	Price: number,
-	Apy: number,
-	Wallet: string,
-	TotalSupply: string,
-	TotalBorrow: string,
-	SupplyOnClick: Function,
-	BorrowOnClick: Function
-};
+// interface SupportedMarketsTypes {
+// 	id: number;
+// 	AssetIcon: string,
+// 	Asset: string,
+// 	Price: number,
+// 	Apy: number,
+// 	Wallet: string,
+// 	TotalSupply: string,
+// 	TotalBorrow: string,
+// 	SupplyOnClick: Function,
+// 	BorrowOnClick: Function
+// };
 
 const SupportedMarkets = [
 	{

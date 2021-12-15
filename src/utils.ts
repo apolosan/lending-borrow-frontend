@@ -1,8 +1,8 @@
-import * as _ from 'lodash';
+// import * as _ from 'lodash';
 import * as nearAPI from 'near-api-js';
-import { CodeResult, QueryResponseKind } from 'near-api-js/lib/providers/provider';
+// import { CodeResult, QueryResponseKind } from 'near-api-js/lib/providers/provider';
 import getConfig, { IConfig } from './config';
-import {Contract, WalletConnection} from 'near-api-js';
+import { WalletConnection } from 'near-api-js';
 
 export interface InitContract {
     dtokenContract: any, // TODO: figure out how to initialize as a Contract
