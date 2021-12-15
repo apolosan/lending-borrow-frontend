@@ -14,7 +14,7 @@ export function Modal(props: IModal) {
         <div className={showHideClassName}>
             <section className="modal-main">
                 {children}
-                <button type="button" onClick={()=> handleClose(0)}>
+                <button type="button" onClick={()=> handleClose(false)}>
                     Close
                 </button>
             </section>

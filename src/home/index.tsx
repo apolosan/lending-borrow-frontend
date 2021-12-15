@@ -4,6 +4,8 @@ import styles from './Home.module.scss';
 
 import WethIcon from '../assets/images/supported-markets/weth__icon.png';
 import WnearIcon from '../assets/images/supported-markets/wnear__icon.png';
+import { Modal } from '../components/modal';
+import { useState } from 'react';
 
 // interface SupportedMarketsTypes {
 // 	id: number;
@@ -54,6 +56,8 @@ const SupportedMarkets = [
 ];
 
 function Home() {
+
+	const [modalShow, setModalShow] = useState(false);
 
 	return (
 		<main>
@@ -119,8 +123,8 @@ function Home() {
 										</li>
 
 										<li>
-											<Button size="small" text="Supply" color="white" onClick={item.SupplyOnClick} />
-											<Button size="small" text="Borrow" color="white" onClick={item.BorrowOnClick} />
+											<Button size="small" text="Supply" color="white" onClick={() => setModalShow(true)} />
+											<Button size="small" text="Borrow" color="white" onClick={() => setModalShow(true)} />
 										</li>
 									</ul>
 								</li>
@@ -129,6 +133,7 @@ function Home() {
 					</div>
 				</div>
 			</div>
+			<Modal show={modalShow} handleClose={setModalShow}>1111</Modal>
 		</main>
 	);
 }

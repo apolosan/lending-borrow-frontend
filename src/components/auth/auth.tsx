@@ -8,6 +8,7 @@ export function Auth(props: InitContract) {
     const { walletConnection } = props;
 
     function signIn() {
+        console.log(walletConnection.isSignedIn());
         walletConnection.requestSignIn();
     }
 
@@ -32,7 +33,7 @@ export function Auth(props: InitContract) {
                             </div>
                             <p>106.810</p>
                         </div>
-                        <Button size="large" color="white" onClick={() => signOut()} text="NEARLend.TestLend" />
+                        <Button size="large" color="white" onClick={() => signOut()} text={walletConnection.getAccountId()} />
                         <Button size="small" color="transparent" onClick={() => signOut()} text="Log out" />
                     </div>
                 )}
