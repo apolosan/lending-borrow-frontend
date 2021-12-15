@@ -1,11 +1,12 @@
 import {InitContract} from '../utils';
 import {useEffect, useState} from 'react';
-import {Modal} from './modal';
-import {ModalContent} from './modal_content';
+import {Modal} from './modalLayout/modalLayout';
+import {ModalContent} from './ModalContent/modal_content';
 
 export function Supply(props: InitContract) {
     const [total_reserve, setReserves] = useState(0);
     const [choosed_asset, setChoosedAsset] = useState(0);
+    const [modalShow, setModalShow] = useState(false);
 
     const onAssetClick = (assetId: number) => {
         setChoosedAsset(assetId);
@@ -65,9 +66,15 @@ export function Supply(props: InitContract) {
                     className="">{total_reserve}</p>
                 </div>
             </div>
-            <Modal show={!!choosed_asset} handleClose={setChoosedAsset}>
+            {/* <Modal show={!!choosed_asset} handleClose={setChoosedAsset}>
                 < ModalContent type="Supply" />
-            </Modal>
+            </Modal> */}
+
+            {modalShow &&
+				<Modal hideModal={() => setModalShow(false)}>
+					
+				</Modal>
+			}
         </div>
 
     )

@@ -1,12 +1,13 @@
-import {useEffect, useState} from 'react';
-import {InitContract} from '../utils';
-import {Modal} from './modal';
-import {ModalContent} from './modal_content';
+import { useEffect, useState } from 'react';
+import { InitContract } from '../utils';
+import { Modal } from './modalLayout/modalLayout';
+import { ModalContent } from './ModalContent/modal_content';
 
 export function Borrow(props: InitContract) {
 
     const [total_borrows, setBorrows] = useState(0);
     const [choosed_asset, setChoosedAsset] = useState(0);
+    const [modalShow, setModalShow] = useState(false);
 
     const onAssetClick = (assetId: number) => {
         setChoosedAsset(assetId);
@@ -25,7 +26,7 @@ export function Borrow(props: InitContract) {
     }, [props.dtokenContract])
 
 
-    return(
+    return (
         <div className="borrow">
             <div />
             <div className="">Available <span>Borrow</span> Assets
@@ -41,7 +42,7 @@ export function Borrow(props: InitContract) {
                         </tr>
                     </thead>
                     <tbody className="">
-                        <tr key={(1)} onClick={()=>{onAssetClick(1)}} className="">
+                        <tr key={(1)} onClick={() => { onAssetClick(1) }} className="">
                             <td className="">
                                 <div className="">
                                     <div className="">DAI</div>
@@ -64,12 +65,18 @@ export function Borrow(props: InitContract) {
             <div className="boxWrapper">
                 <div className="blueBox"><p
                     className="">Total Borrow</p><p
-                    className="">{total_borrows}</p>
+                        className="">{total_borrows}</p>
                 </div>
             </div>
-            <Modal show={!!choosed_asset} handleClose={setChoosedAsset}>
+            {/* <Modal show={!!choosed_asset} handleClose={setChoosedAsset}>
                 < ModalContent type="Borrow" />
-            </Modal>
+            </Modal> */}
+
+            {modalShow &&
+                <Modal hideModal={() => setModalShow(false)}>
+
+                </Modal>
+            }
         </div>
     )
 }
