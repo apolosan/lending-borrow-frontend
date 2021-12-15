@@ -1,55 +1,88 @@
+:root {
+  --default-white-color: #fff;
+  --default-gray-color: #777;
+  --default-text-color: #333;
+  --default-thame-color: #32846F;
+  --default-thame-hover-color: #D9F0E3;
+  --default-border-color: #F0F0F0;
+}
+
 * {
+  font-family: 'Urbanist', sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   -moz-padding-start: 0px;
-  color: #000;
 }
 
-.App {}
-
-.header {
-  overflow: hidden;
-  display: flex;
-  overflow: hidden;
-  border: 1px solid #333;
-  align-items: center;
-  height: 50px;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
-ul.menu  {
-  display: flex;
+
+body {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1;
+
+  background-color: var(--default-white-color);
+  color: var(--default-text-color);
+}
+
+h1, h2, h3 {
+  color: var(--default-text-color);
+  font-weight: bold;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 96px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
-  overflow: hidden;
-  margin-right: auto;
 }
 
-ul.menu li {
-  height: 25px;
-  vertical-align: middle;
+a, a:hover, a:focus {
+  color: inherit;
   text-decoration: none;
-  padding: 0 10px;
 }
 
-ul.menu li a {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  padding: 5px 0;
+#root {
+  height: 100%
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.container {
+  max-width: 1230px;
   width: 100%;
-}
-ul.menu li a.active {
-  text-decoration: underline;
-}
-
-.header .auth {
-  max-width: 50vh;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
-.header .auth div {
-  text-align: center;
-  flex: 3;
-}
+
+
+
+
 
 .portfolio, .borrow {
   text-align: center;

@@ -1,0 +1,95 @@
+.intro {
+	width: 100%;
+	max-width: 2000px;
+	margin: 0 auto;
+	height: 343px;
+	min-height: 343px;
+	background: url('../assets/images/mountains_bg.svg') no-repeat center;
+	background-size: cover;
+
+	&__inner {
+		padding-top: 80px;
+		max-width: 710px;
+
+		h1 {
+			margin-bottom: 10px;
+		}
+
+		p {
+			font-weight: 500;
+			line-height: 27px;
+		}
+	}
+}
+
+.home {
+	margin-top: -60px;
+
+	.widgets {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-bottom: 140px;
+	}
+}
+
+.supportedMarkets {
+	.table {
+		margin-top: 40px;
+		margin-bottom: 140px;
+		width: 100%;
+		box-shadow: 5px 8px 16px rgb(200 200 200 / 15%);
+
+		&__header,
+		&__item {
+			padding-left: 38px;
+			padding-right: 24px;
+		}
+
+		&__header {
+			background-color: #f3f3f3;
+			height: 55px;
+
+			.colmn li {
+				min-height: 55px;
+				color: var(--default-gray-color);
+				font-weight: 600;
+			}
+		}
+
+		&__item {
+			border-bottom: 1px solid #F0F0F0;
+
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+	}
+
+	.colmn {
+		display: grid;
+		grid-template-columns: 184px 116px 133px 133px 168px 170px auto;
+		grid-gap: 10px;
+
+		li {
+			display: flex;
+			align-items: center;
+			min-height: 70px;
+			font-weight: 500;
+		}
+
+		&__icon {
+			width: 40px;
+			height: 40px;
+			margin-right: 10px;
+		}
+
+		button {
+			margin-right: 10px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+}
