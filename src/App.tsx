@@ -1,11 +1,18 @@
 
-import './css/app.css';
-import {InitContract} from './utils';
+import React from 'react';
+import './styles/app.css';
+import { InitContract } from './utils';
 import Navigation from './components/navigation';
+import Footer from './components/footer/footer';
+import Home from './home/index';
 
 function App(props: InitContract) {
   return (
-    <Navigation {...props} />
+    <div className="app">
+      <Navigation {...props} />
+      <Home />
+      <Footer />
+    </div>
   );
 }
 

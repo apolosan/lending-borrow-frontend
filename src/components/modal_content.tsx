@@ -1,4 +1,4 @@
-import {IModal} from './modal';
+// import {IModal} from './modal';
 
 export interface IModalContent {
     type: string
@@ -23,4 +23,4 @@ export function ModalContent(props: IModalContent) {
             </div>
         </div>
     );
-};
+}

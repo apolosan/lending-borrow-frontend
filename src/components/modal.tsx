@@ -1,4 +1,4 @@
-import '../css/modal.css';
+import '../styles/modal.css';
 
 export interface IModal {
     handleClose: any;

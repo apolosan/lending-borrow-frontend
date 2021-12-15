@@ -17,7 +17,7 @@ export function Portfolio(props: InitContract) {
             }
 
         })();
-    }, [])
+    }, [props.dtokenContract])
     return(
         <div className="portfolio">
             <div className="boxWrapper">

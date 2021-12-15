@@ -1,0 +1,42 @@
+.rateWidget {
+	h3 {
+		margin-bottom: 15px;
+	}
+
+	.list {
+		display: flex;
+		align-items: center;
+
+		li {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			padding: 16px;
+			margin-right: 15px;
+			height: 91px;
+			width: 268px;
+			border: 1px solid var(--default-border-color);
+			box-shadow: 5px 8px 16px rgba(200, 200, 200, 0.15);
+			background-color: var(--default-white-color);
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			h4 {
+				margin-bottom: 8px;
+				font-weight: 600;
+				font-size: 18px;
+				line-height: 22px;
+				color: var(--default-gray-color);
+			}
+
+			p {
+				font-weight: bold;
+				font-size: 24px;
+				line-height: 29px;
+			}
+		}
+	}
+}

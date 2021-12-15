@@ -1,0 +1,31 @@
+.auth {
+	width: fit-content;
+
+	&__signed {
+		display: flex;
+		align-items: center;
+	}
+
+	&__value {
+		display: flex;
+		align-items: center;
+
+		&>div {
+			width: 16px;
+			height: 16px;
+			margin-right: 8px;
+
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+
+		&>p {
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 24px;
+			margin-right: 32px;
+		}
+	}
+}

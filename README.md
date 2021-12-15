@@ -1,4 +1,4 @@
-# lending-borrow-frontend
+# landing-borrow-frontend
 Web UI for lending-borrow-protocol
 
 ## Available Scripts

@@ -21,11 +21,11 @@ export function Supply(props: InitContract) {
             }
 
         })();
-    }, []);
+    }, [props.dtokenContract]);
 
     return(
         <div className="borrow">
-            <div className=""></div>
+            <div />
             <div className="">Available <span>Borrow</span> Assets
             </div>
             <div className="tableWrapper">
