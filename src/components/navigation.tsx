@@ -3,12 +3,11 @@ import {
     Route,
     Routes
 } from "react-router-dom";
-import { Supply } from './supply';
-import { Borrow } from './borrow';
-import { Portfolio } from './portfolio';
 import { HeaderMenu } from './header/header';
 
 import {InitContract} from '../utils';
+import Home from "./home";
+import Footer from "./footer/footer";
 
 
 function Navigation(props: InitContract) {
@@ -16,10 +15,9 @@ function Navigation(props: InitContract) {
         <Router>
             <HeaderMenu {...props} />
             <Routes>
-                <Route path="/supply" element={<Supply  {...props}  />}/>
-                <Route path="/borrow" element={<Borrow  {...props} />}/>
-                <Route path="/portfolio" element={<Portfolio {...props} />}/>
+                <Route path="/" element={<Home  {...props}  />}/>
             </Routes>
+            <Footer />
         </Router>
     );
 }

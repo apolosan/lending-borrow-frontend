@@ -5,7 +5,9 @@ import styles from './Auth.module.scss';
 
 export function Auth(props: InitContract) {
 
-    const { walletConnection } = props;
+    const { walletConnection, currentUser } = props;
+
+    const balance = Math.round(((currentUser?.balance || 0) / (10**24)) * 100000) / 100000;
 
     function signIn() {
         console.log(walletConnection.isSignedIn());
@@ -31,9 +33,9 @@ export function Auth(props: InitContract) {
                             <div>
                                 <img src={WnearSmallIcon} alt="Wnear Icon" />
                             </div>
-                            <p>106.810</p>
+                            <p>{balance}</p>
                         </div>
-                        <Button size="large" color="white" onClick={() => signOut()} text={walletConnection.getAccountId()} />
+                        <Button size="large" color="white" onClick={() => {console.log(walletConnection.account())}} text={walletConnection.getAccountId()} />
                         <Button size="small" color="transparent" onClick={() => signOut()} text="Log out" />
                     </div>
                 )}

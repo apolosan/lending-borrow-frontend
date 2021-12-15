@@ -4,7 +4,7 @@
 	margin: 0 auto;
 	height: 343px;
 	min-height: 343px;
-	background: url('../assets/images/mountains_bg.svg') no-repeat center;
+	background: url('../../assets/images/mountains_bg.svg') no-repeat center;
 	background-size: cover;
 
 	&__inner {
@@ -33,7 +33,10 @@
 	}
 }
 
+.center { justify-content: center; }
+
 .supportedMarkets {
+
 	.table {
 		margin-top: 40px;
 		margin-bottom: 140px;
@@ -55,6 +58,7 @@
 				color: var(--default-gray-color);
 				font-weight: 600;
 			}
+
 		}
 
 		&__item {
@@ -68,7 +72,7 @@
 
 	.colmn {
 		display: grid;
-		grid-template-columns: 184px 116px 133px 133px 168px 170px auto;
+		grid-template-columns: 164px 96px 113px 133px 133px 128px 130px auto;
 		grid-gap: 10px;
 
 		li {

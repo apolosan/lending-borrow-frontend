@@ -5,6 +5,7 @@ import styles from './ModalContent.module.scss';
 
 import WethIcon from '../../assets/images/supported-markets/weth__icon.png';
 import WnearIcon from '../../assets/images/supported-markets/wnear__icon.png';
+import { stringify } from 'querystring';
 
 const { TabPane } = Tabs;
 
@@ -36,6 +37,19 @@ export function ModalContent(props: IModalContent) {
         console.log('clickWithdraw');
     };
 
+    const renderButton = (type: string) => {
+        switch(type) {
+            case 'supply':
+            return <button className={styles.tabs__inputBtn} onClick={clickMaxBtn}>Max</button>
+            case 'borrow':
+                return <button className={styles.tabs__inputBtn} onClick={click80PercentLimit}>80% limit</button>
+            case 'borrow':
+                return <button className={styles.tabs__inputBtn} onClick={clickMaxWithdraw}>Max</button>
+            default:   
+                return 
+        }
+      }
+
     const TabInput = ({ type }: TabInputProps) => {
         return (
             <>
@@ -44,7 +58,7 @@ export function ModalContent(props: IModalContent) {
                         <img src={props.icon === "weth" ? WethIcon : props.icon === "wnear" ? WnearIcon : ""} alt="icon" />
                     </div>
                     <input type="number" placeholder="Supply WETH" />
-                    {type === "supply" ?
+                    {/* {type === "supply" ?
                         <button className={styles.tabs__inputBtn} onClick={clickMaxBtn}>Max</button>
                         : type === "borrow" ?
                             <button className={styles.tabs__inputBtn} onClick={click80PercentLimit}>80% limit</button>
@@ -52,7 +66,8 @@ export function ModalContent(props: IModalContent) {
                                 <button className={styles.tabs__inputBtn} onClick={clickMaxWithdraw}>Max</button>
                                 : type === "repay" ? ""
                                     : null
-                    }
+                    } */}
+                    {renderButton(type)}
                 </div>
 
                 <ul className={styles.tabs__subInfo}>

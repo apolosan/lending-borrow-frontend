@@ -7,7 +7,7 @@ import { WalletConnection } from 'near-api-js';
 export interface InitContract {
     dtokenContract: any, // TODO: figure out how to initialize as a Contract
     controllerContract: any, // TODO: figure out how to initialize as a Contract
-    currentUser: {accountId: string, balance: string} | undefined,
+    currentUser: {accountId: string, balance: number} | undefined,
     nearConfig: IConfig,
     walletConnection: WalletConnection
 }
@@ -88,5 +88,35 @@ export async function initContract() {
     currentUser,
     nearConfig,
     walletConnection
-  };
+  } as InitContract;
 }
+
+
+
+
+// getMarketList -> Market[]
+
+
+
+// Wallet -> YourSupply Your Borrow
+
+
+// interface Asset {
+//   name: string;
+//   address: string;
+// }
+
+
+// Controller :: get_assets() -> Asset[]
+// Dtoken :: get_supply_by_asset(adress: string) -> number
+// Dtoken ::  get_borrow_by_asset(adress: string) -> number
+// Controller :: get_price_by_asset(adress: string) -> number
+// Controller :: get_apy_by_asset(adress: string) -> number
+// Dtoken ::  get_underlying_balance_by_asset(adress: string) -> number
+
+// APY -> Controller :: get_interest_rate() -> number
+// Price -> Controller :: get_price(adress: string) -> number
+// YourSupply -> Dtoken :: get_supply() -> number
+// YourBorrow -> Dtoken :: get_borrow()  ?optional -> number
+// Exchange rate -> Dtoke :: get_exchange_rate() -> number
+
