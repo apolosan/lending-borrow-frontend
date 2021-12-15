@@ -1,16 +1,17 @@
 import { useEffect, useState } from 'react';
 import { InitContract } from '../utils';
-import { Modal } from './modalLayout/modalLayout';
-import { ModalContent } from './ModalContent/modal_content';
+// import { Modal } from './modalLayout/modalLayout';
+// import { ModalContent } from './ModalContent/modal_content';
 
 export function Borrow(props: InitContract) {
 
     const [total_borrows, setBorrows] = useState(0);
-    const [choosed_asset, setChoosedAsset] = useState(0);
-    const [modalShow, setModalShow] = useState(false);
+    // const [choosed_asset, setChoosedAsset] = useState(0);
+    // const [modalShow, setModalShow] = useState(false);
 
     const onAssetClick = (assetId: number) => {
-        setChoosedAsset(assetId);
+        // setChoosedAsset(assetId);
+        console.log(assetId);
     };
 
     useEffect(() => {
@@ -72,11 +73,11 @@ export function Borrow(props: InitContract) {
                 < ModalContent type="Borrow" />
             </Modal> */}
 
-            {modalShow &&
-                <Modal hideModal={() => setModalShow(false)}>
+            {/*{modalShow &&*/}
+            {/*    <Modal hideModal={() => setModalShow(false)}>*/}
 
-                </Modal>
-            }
+            {/*    </Modal>*/}
+            {/*}*/}
         </div>
     )
 }
